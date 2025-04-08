@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uovo di Pasqua con Strisce</title>
+  <style>
+    /* Centriamo l'elemento nella pagina */
+    body {
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Stile dell'uovo con gradiente e forma personalizzata */
+    .egg {
+      position: relative;
+      width: 200px;
+      height: 280px;
+      /* Vecchio gradiente:
+      background-image: linear-gradient(to bottom,
+        #ff99c8, #ffa6b1, #ffb9a3, #ffcda2,
+        #f4e0af, #e4e8b8, #d5eec6, #caf3d6,
+        #b8f0e0, #abebea, #a6e5f3, #a9def9);
+      */
+      background-image: linear-gradient(to bottom, #ffb6c1, #ffc1ba, #ffcdb7, #ffdbb8, #ffe8bf, #fdedbb, #f8f3b9, #f1f9b9, #e2f9ac, #cef9a2, #b6fa9b, #98fb98);
+      border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    /* Stile base per le strisce */
+    .stripe {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.4);
+      transform: skewY(-10deg);
+    }
+
+    /* Posizionamento verticale delle strisce tramite nth-child */
+    .stripe:nth-child(1) {
+      top: 15%;
+    }
+    .stripe:nth-child(2) {
+      top: 45%;
+    }
+    .stripe:nth-child(3) {
+      top: 75%;
+    }
+  </style>
+</head>
+<body>
+  <div class="egg">
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+  </div>
+</body>
+</html>
